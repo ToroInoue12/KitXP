@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitXP | the legend :0</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        /* Custom font import for aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Tailwind bg-slate-900 */
+            /* Added GIF background */
+            background-image: url('cat.gif');
+            background-repeat: repeat;
+        }
+        /* Sticky header effect */
+        #navbar.sticky {
+            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 70%;
+            height: 3px;
+            background-color: #6366f1; /* Tailwind indigo-500 */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Navigation Bar --><nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold text-indigo-400 tracking-wider">KitXP</a>
+            <div class="space-x-4 hidden sm:flex">
+                <a href="#about" class="hover:text-indigo-400 transition duration-150">About Me</a>
+                <a href="#projects" class="hover:text-indigo-400 transition duration-150">Projects</a>
+                <a href="#contact" class="hover:text-indigo-400 transition duration-150">Contact</a>
+            </div>
+            <!-- Simple Mobile Menu Icon (non-functional for this single-file mandate) --><button class="sm:hidden text-white p-2 rounded-lg hover:bg-slate-800">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- 1. Hero Section --><section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl space-y-6">
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tighter">
+                    <span class="text-indigo-400">KitXP</span> | Web Dev Obsessed
+                </h1>
+                <p class="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto">
+                    A British kid who freakin loves HTML too much... I'm obsessed with JavaScript, its like all i can think of is.. Sonic, Klonoa, Nintendo Wii U, Javascript and HTML ohhhh AND TAILWIND CSS :00000
+                </p>
+                
+                <!-- Buttons Wrapper for alignment -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.03] animate-pulse">
+                        <i data-lucide="rocket" class="w-5 h-5 mr-2"></i>
+                        Explore My Web Projects
+                    </a>
+                    <!-- Music Play Button -->
+                    <button id="music-play-button" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 transform hover:scale-[1.03]">
+                        <i data-lucide="volume-2" class="w-5 h-5 mr-2"></i>
+                        play the dang music if your browser hates you
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. About Me Section --><section id="about" class="py-20 px-6 bg-slate-800">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 section-title">About Me</h2>
+                
+                <div class="lg:grid lg:grid-cols-4 gap-12 items-center">
+                    <!-- Profile Picture --><div class="lg:col-span-1 flex justify-center lg:justify-start mb-8 lg:mb-0">
+                        <img src="kitxp.png" alt="KitXP's Profile Picture" class="w-48 h-48 object-cover rounded-full border-4 border-indigo-500 shadow-xl">
+                    </div>
+
+                    <!-- Text Content (Now spans 3 columns) --><div class="lg:col-span-3 space-y-6 text-slate-300 text-lg">
+                        <p>I'm **KitXP**, a British developer who is completely hooked on HTML and JavaScript—seriously, I spend all my time solving challenging coding problems just for the fun of it.</p>
+                        <p>You could say I'm just a silly, obsessed JavaScript kid with too much passion for the web!</p>
+                        <!-- User's specific, desired line --><p class="text-2xl font-extrabold text-indigo-400 italic">I even made a nes emulator. crazy shit man</p>
+                    </div>
+
+                    <!-- Skills & Toolkit (REMOVED) --></div>
+            </div>
+        </section>
+
+        <!-- 3. Projects Section (Updated to Grid Tile Layout) --><section id="projects" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-16 section-title">Featured Projects</h2>
+                
+                <!-- Responsive Grid Container: 2 cols on mobile, 3 on tablet, 4 on large screens --><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> 
+                    
+                    <!-- Project Card 1: KXPReloaded (NES Emulator) --><div class="bg-slate-800 rounded-xl shadow-2xl transition duration-300 hover:ring-4 hover:ring-indigo-500/50 overflow-hidden group">
+                        
+                        <!-- Image Area (Visual focus) --><div class="relative overflow-hidden">
+                            <!-- Image Source updated to kxpreloaded.png --><img src="kxpreloaded.png" 
+                                alt="Preview of KXPReloaded NES Emulator" 
+                                class="w-full object-cover transition duration-300 group-hover:scale-105">
+                        </div>
+            
+                        <!-- Text Content and Buttons --><div class="p-4 space-y-3">
+                            <h3 class="text-xl font-extrabold text-indigo-400 truncate">KXPReloaded</h3>
+                            <p class="text-sm text-slate-400">One day.. as a dreamer with a lolipop in his hand and drinking 7up i thought: what if i built a nes emulator into javascript? Nah never would happen in amillion years- Kit from the future: here you go</p>
+                            
+                            <div class="flex flex-col gap-2 pt-2">
+                                <a href="https://toroinoue12.github.io/KXPReloadedWebsite/" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition">
+                                    <i data-lucide="play" class="w-4 h-4 mr-2"></i>
+                                    Download <:D
+                                </a>
+                                <a href="https://github.com/ToroInoue12/KXPReloaded" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-indigo-400 hover:bg-slate-700 transition border border-indigo-400">
+                                    <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Save The World (Recreation) --><div class="bg-slate-800 rounded-xl shadow-2xl transition duration-300 hover:ring-4 hover:ring-indigo-500/50 overflow-hidden group">
+                        
+                        <!-- Image Area (Visual focus) --><div class="relative overflow-hidden">
+                            <!-- Image path updated to savetheworld.png --><img src="savetheworld.png" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x300/4f46e5/ffffff?text=Save+The+World';" 
+                                alt="Preview of Save The World Recreation" 
+                                class="w-full object-cover transition duration-300 group-hover:scale-105">
+                        </div>
+            
+                        <!-- Text Content and Buttons --><div class="p-4 space-y-3">
+                            <h3 class="text-xl font-extrabold text-indigo-400 truncate">Save The World (Recreation)</h3>
+                            <!-- SHORTENED DESCRIPTION HERE -->
+                            <p class="text-sm text-slate-400">A faithful HTML recreation of Outfit7's legendary app. Others might say it's just a button that saves an image, but we know the truth: this is a monument to heroism and your power to save the entire world with a single, heroic click.</p>
+                            
+                            <div class="flex flex-col gap-2 pt-2">
+                                <a href="https://toroinoue12.github.io/SavetheWorld/" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition">
+                                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                                    Website
+                                </a>
+                                <a href="https://github.com/ToroInoue12/SavetheWorld" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-indigo-400 hover:bg-slate-700 transition border border-indigo-400">
+                                    <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contact Section --><section id="contact" class="py-20 px-6 bg-slate-900">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Contact Me for no Reason.</h2>
+                <p class="text-xl text-slate-400 mb-10">Yes. contact me.</p>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="mailto:SonicTheHedgehogSEGA@proton.me" class="flex items-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 transition transform hover:scale-105 shadow-lg">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
+                        Email Me
+                    </a>
+                    <a href="https://github.com/ToroInoue12" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
+                        <i data-lucide="github" class="w-5 h-5 mr-3"></i>
+                        GitHub
+                    </a>
+                    <a href="https://x.com/KitMewFirey" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
+                        <i data-lucide="twitter" class="w-5 h-5 mr-3"></i>
+                        Twitter/X
+                    </a>
+                    <a href="https://bsky.app/profile/kitxp.bsky.social" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
+                        <i data-lucide="message-square" class="w-5 h-5 mr-3"></i>
+                        Bluesky
+                    </a>
+                    <a href="https://kitxp.itch.io" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
+                        <i data-lucide="gamepad-2" class="w-5 h-5 mr-3"></i>
+                        itch.io
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer --><footer class="text-center py-6 border-t border-slate-700 text-sm text-slate-500">
+        &copy; this site is by kitxp, if you steal this i will be THE MONSTER UNDER YOUR BED.
+    </footer>
+
+    <!-- Background Music Player -->
+    <audio id="background-music" loop>
+        <!-- Removed 'autoplay' attribute here -->
+        <source src="unity.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // JavaScript for smooth scrolling and sticky nav bar effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const musicPlayButton = document.getElementById('music-play-button');
+            const backgroundMusic = document.getElementById('background-music');
+
+            // --- Music Play Logic ---
+            if (musicPlayButton && backgroundMusic) {
+                // Check if music is playing. If it successfully starts (e.g., if the user clicks anywhere else), hide the button.
+                // Since 'autoplay' is removed, we assume it's not playing initially... sadly
+                
+                musicPlayButton.addEventListener('click', () => {
+                    backgroundMusic.play().then(() => {
+                        // Successfully started playback, hide the button fuck yeah bitch
+                        musicPlayButton.style.display = 'none';
+                    }).catch(error => {
+                        // Failed to play (this often happens if the user interacts too fast before the page is fully ready)
+                        console.error("Music playback failed:", error);
+                        musicPlayButton.textContent = "Error playing music, try again?";
+                    });
+                });
+            }
+
+            // Toggle sticky class on scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('sticky');
+                } else {
+                    navbar.classList.remove('sticky');
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
