@@ -3,631 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>~*~ KiTxP's wEb SiTe Of AwEsOmE ~*~</title>
-    
-    <!-- !!! BLUESKY HANDLE VERIFICATION META TAG !!! -->
-    <meta name="atproto-did" content="did:plc:lgaw7nzpymtn5ljoi37ovdv7">
+    <title>The Final Rest 😔 i lost you old html. lost media forever.... 😔</title>
     
     <style>
-        /* BASE 2000s STYLES (MORE BLUE!) */
+        /* Minimalist Style for centering and making it long */
         body {
-            /* Darker Blue Tiled background pattern */
-            background-color: #000044;
-            background-image: url('https://placehold.co/100x100/111166/111166/pattern?text=');
-            color: #33FFFF; /* Electric Cyan Text */
-            font-family: "Comic Sans MS", fantasy, cursive, sans-serif;
+            background-color: #0d0d0d; /* Slightly darker background */
+            color: #f0f0f0; 
+            font-family: 'Consolas', monospace;
             margin: 0;
-            padding: 20px 0;
-            text-align: center; /* Center everything */
+            display: flex;
+            flex-direction: column; /* Allows vertical stacking */
+            justify-content: flex-start; /* Start content at the top */
+            align-items: center;
+            min-height: 300vh; /* Make the page extremely long (3x the screen height) */
+            padding-top: 50px; /* Add initial padding so the grave isn't glued to the top edge */
+        }
+
+        /* Padding/Space for length */
+        .spacer {
+            min-height: 100vh; /* Large empty space */
         }
         
-        /* MAIN CONTAINER (Simulating the fixed-width table layout) */
-        #container {
-            width: 780px; 
-            margin: 0 auto;
-            border: 10px groove #00FFFF; /* Bright Cyan Border */
-            background-color: #000055; /* Slightly lighter inner background */
-            padding: 15px;
-            text-align: left;
-            box-shadow: 5px 5px 15px #000000;
-        }
-
-        /* HEADER AND BANNERS */
-        #header {
-            background-color: #3366FF; /* Vibrant Blue */
-            color: #FFFFFF; /* White text for contrast */
-            padding: 10px;
-            margin-bottom: 20px;
+        /* Grave Style */
+        .grave {
             text-align: center;
-            border: 5px ridge #FFFFFF; 
+            width: fit-content;
+            padding: 40px 60px; /* Slightly more padding */
+            border: 4px solid #444;
+            border-radius: 8px;
+            background-color: #2a2a2a;
+            color: #bbb;
+            font-size: 20px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 1px #000;
         }
-        #header h1 {
-            font-size: 32pt;
-            text-shadow: 3px 3px #00FFCC; /* Aqua Shadow */
-            margin: 0;
-        }
-        #header p {
-            font-style: italic;
-            margin: 5px 0 0;
-            font-size: 10pt;
-        }
-        
-        /* NAVIGATION */
-        #nav {
-            margin-bottom: 20px;
-            text-align: center;
-            padding: 5px 0;
-            border: 2px dashed #FF66FF; /* Pink/Magenta dashed border for accent */
-        }
-        #nav a {
-            color: #FFFFFF; /* White links */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 12pt;
-            padding: 5px 10px;
-            border: 2px outset #00FFFF; /* Cyan Button/Outset look */
-            background-color: #0000AA; /* Deep Blue background */
-            margin: 0 5px;
-            display: inline-block;
-        }
-        #nav a:hover {
-            color: #000000; /* Black on hover */
-            background-color: #33FFFF; /* Aqua hover */
-            border: 2px inset #00FFFF; 
-        }
-
-        /* SECTION STYLES (Groovy Fieldsets) */
-        section {
-            padding: 15px;
-            margin-bottom: 25px;
-            border: 4px solid #00FFFF;
-            background-color: #000066; /* Slightly different background for sections */
-        }
-        section h2 {
-            font-size: 20pt;
-            color: #33FFFF; /* Aqua/Cyan */
-            text-decoration: underline;
-            margin-top: 0;
-            border-bottom: 3px dotted #FF66FF; /* Magenta dotted bottom border */
-            padding-bottom: 5px;
-        }
-
-        /* GENERAL TEXT AND LINKS */
-        p, li {
-            font-size: 11pt;
-            line-height: 1.5;
-        }
-        a:not(#nav a) {
-            color: #99CCFF; /* Light Blue/White links */
-            text-decoration: underline;
-        }
-        a:not(#nav a):hover {
-            color: #FF00FF; /* Magenta on hover */
-        }
-
-        /* MARQUEE EFFECT */
-        #scroller {
-            background-color: #FF66FF; /* Magenta/Pink accent */
-            color: #000000;
-            padding: 5px;
-            font-weight: bold;
-            border: 3px double #FFFFFF;
-            margin-bottom: 20px;
-        }
-
-        /* PROJECT CARDS (Simulated Table/Block) */
-        .project-card {
-            width: 48%; 
-            float: left;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 3px dashed #33FFFF; /* Cyan dashed border */
-            background-color: #000077;
-            text-align: center;
-        }
-        .project-card:nth-child(odd) {
-            margin-right: 4%; 
-        }
-        .project-card h3 {
-            color: #FF66FF; /* Pink/Magenta accent */
-            font-size: 16pt;
-            margin: 5px 0;
-        }
-        .project-card img {
-            border: 3px solid #FFFFFF;
-            max-width: 90%;
-            height: auto;
+        .grave span {
             display: block;
-            margin: 0 auto 10px;
-        }
-        .project-link-button {
-            display: block;
-            margin: 5px auto;
-            padding: 5px 10px;
-            background-color: #3366FF; /* Vibrant Blue button */
-            color: white;
-            border: 3px outset #99CCFF;
-            text-decoration: none;
+            font-size: 36px; /* Slightly larger */
             font-weight: bold;
+            margin-top: 15px;
+            color: #f0f0f0;
+            margin-bottom: 20px;
         }
-        .project-link-button:hover {
-            background-color: #0055EE;
-            border: 3px inset #99CCFF;
+        .grave p {
+            margin: 10px 0; /* More vertical margin for lines */
+            font-size: 16px;
+            color: #999;
         }
-        .github-link {
-            background-color: #222244; /* Darker Gray/Blue button */
-            border: 3px outset #666699;
-        }
-
-        /* FOOTER */
-        #footer {
-            clear: both;
+        .grave .date {
+            font-size: 12px;
+            color: #666;
             margin-top: 20px;
-            padding-top: 10px;
-            border-top: 5px solid #33FFFF;
-            font-size: 9pt;
-            text-align: center;
-            color: #AAAAAA;
         }
-
-        /* BUTTONS */
-        .btn-style {
-            padding: 8px 20px;
-            background-color: #3366FF; /* Vibrant Blue */
-            color: #FFFFFF;
-            border: 5px ridge #99CCFF;
+        .eulogy {
+            max-width: 400px;
+            font-size: 16px;
+            margin-top: 25px;
+            color: #ccc;
+            font-style: italic; /* Use italic for a softer, more reflective tone */
+        }
+        .emotion-block {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #444;
+            font-size: 18px;
+            color: #ff5555;
+            line-height: 1.6;
+        }
+        .emotion-block .emotion-text {
+             color: #ff5555;
+             font-style: normal;
+             margin: 0;
+        }
+        .emotion-block .emotion-title {
             font-weight: bold;
-            cursor: pointer;
-            margin: 10px;
-            text-decoration: none;
-            display: inline-block;
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 5px;
         }
-        .btn-style:hover {
-            background-color: #0055EE;
-            border: 5px groove #99CCFF;
-        }
-        
-        /* GUESTBOOK SPECIFIC STYLES */
-        #guestbook-form input, #guestbook-form textarea {
-            box-sizing: border-box; 
-        }
-        .guestbook-entry-box {
-            border: 2px solid #33FFFF; 
-            padding: 10px; 
-            margin-bottom: 15px; 
-            background-color: #000066; 
-            box-shadow: 2px 2px #FF66FF; /* Magenta shadow */
-        }
-        .guestbook-entry-name {
-            margin: 0; 
-            font-weight: bold; 
-            color: #99CCFF; 
-            border-bottom: 1px dotted #99CCFF;
-        }
-        .guestbook-entry-date {
-            font-size: 8pt; 
-            color: #888888; 
-            font-weight: normal;
-        }
-        .guestbook-entry-message {
-            margin-top: 5px; 
-            color: #FFFFFF;
-        }
-        #user-id-display {
-            font-size: 9pt;
-            text-align: center;
-            color: #FF66FF;
-            margin-bottom: 10px;
+        .sad-faces {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-
-<div id="container">
-
-    <!-- HEADER (The classic Geocities/Angelfire banner) -->
-    <header id="header">
-        <h1>[ KitXP ]</h1>
-        <p>You have found the coolest site on the internet! Enter at your own risk!</p>
-    </header>
-
-    <!-- MARQUEE (Essential 2000s feature) -->
-    <div id="scroller">
-        <marquee behavior="alternate" direction="left" scrollamount="3">
-            !!! WELCOME TO MY WEB SHRINE!!! &lt;-- Best Viewed with Internet Explorer 4.0 or Higher!
-        </marquee>
-    </div>
-
-    <!-- NAVIGATION -->
-    <nav id="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT ME</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#guestbook">GUESTBOOK</a>
-        <a href="#other-websites">BUDDIES</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
     
-    <!-- 1. Hero Section -->
-    <section id="home">
-        <h2>★ Welcome to My Homepage! ★</h2>
-        
-        <center>
-            <!-- Animated GIF Placeholder -->
-            <img src="kitxp.gif" alt="Animated Logo" style="margin-bottom: 15px; border: 3px solid #00FFFF;">
-        </center>
+    <div class="grave">
+        <p class="sad-faces">😔 😔 😔 😔 😔 😔 😔 😔</p>
+        R.I.P.
+        <span>KitXP's Website</span>
 
-        <p>Hey there! I'm KitXP, a British kid who is totally obsessed with making stuff for the web! My heroes are Sonic and Klonoa, and I still think the Nintendo Wii U is boss. I spend all my time coding crazy stuff in JavaScript and HTML (yeah, I use that new 'Tailwind' thing, it's pretty neat!).</p>
-        
-        <p>
-            <center>
-                <a href="#projects" class="btn-style" style="background-color: #00AAFF; border-color: #33FFFF;">
-                    &gt;&gt; START EXPLORING MY PROJECTS NOW &lt;&lt;
-                </a>
-                <button id="music-play-button" class="btn-style" style="background-color: #990000; border-color: #FF0000;">
-                    Play The DANG MUSIC
-                </button>
-            </center>
-        </p>
+        <p class="date">The Beginning of a Vision - The End of the Journey</p>
 
-    </section>
-
-    <!-- 2. About Me Section -->
-    <section id="about">
-        <h2>☺ About Your Friendly Neighbourhood KitXP ☺</h2>
-        
-        <div style="float: right; margin: 0 0 10px 15px; border: 5px solid #FF66FF;">
-            <!-- Profile Picture -->
-            <img src="kitxp.png" alt="KitXP's Profile Picture" width="150" height="150" style="display: block;">
+        <div class="eulogy">
+            This is the final resting place of a beloved website. It wasn't just code; it was a personal project, a wild, shifting space that went from a sleek modern portfolio to a chaotic retro shrine. That initial spark, the 'Original Vision,' got lost in all the changes. Every edit just took it further from the beginning. It rests here now, in the deep, quiet void.
         </div>
         
-        <p>I'm just a silly, obsessed JavaScript kid with too much passion for the web. I'm British, and yeah, I spend all my time solving challenging coding problems just for the fun of it! I live and breathe HTML, lol.</p>
-        
-        <!-- User's specific, desired line -->
-        <p style="font-size: 14pt; color: #FF66FF; font-weight: bold; text-shadow: 2px 2px #000000;">I even made a nes emulator. crazy shit man</p>
+        <p>Gone but not forgotten.</p>
 
-        <div style="clear: both;"></div>
-    </section>
-
-    <!-- 3. Projects Section -->
-    <section id="projects">
-        <h2>&#9733; My Mega Awesome Projects &#9733;</h2>
-        
-        <!-- Project Card 1: KXPReloaded (NES Emulator) -->
-        <div class="project-card">
-            <h3>KXPReloaded: NES Emu!</h3>
-            <img src="kxpreloaded.png" alt="Preview of KXPReloaded NES Emulator">
-            <p style="font-size: 10pt; color: #CCCCCC;">A crazy challenge realized in code: a complete NES emulator made just with JavaScript. From idea to reality—I can't believe I pulled that off!</p>
-            <a href="https://toroinoue12.github.io/KXPReloadedWebsite/" target="_blank" class="project-link-button">
-                Download NOW &lt;3
-            </a>
-            <a href="https://github.com/ToroInoue12/KXPReloaded" target="_blank" class="project-link-button github-link">
-                (View) GitHub Source
-            </a>
-        </div>
-
-        <!-- Project Card 2: Save The World (Recreation) -->
-        <div class="project-card">
-            <h3>Save The World (Recreation)</h3>
-            <img src="savetheworld.png" 
-                onerror="this.onerror=null; this.src='https://placehold.co/400x300/4f46e5/ffffff?text=Save+The+World';" 
-                alt="Preview of Save The World Recreation">
-            <p style="font-size: 10pt; color: #CCCCCC;">It's a faithful HTML recreation of Outfit7's legendary app. You click the button, you save the world. Simple as. True heroism!</p>
-            <a href="https://toroinoue12.github.io/SavetheWorld/" target="_blank" class="project-link-button">
-                Visit the HERO SITE
-            </a>
-            <a href="https://github.com/ToroInoue12/SavetheWorld" target="_blank" class="project-link-button github-link">
-                (View) GitHub Source
-            </a>
-        </div>
-
-        <div style="clear: both;"></div>
-    </section>
-    
-    <!-- 4. Guestbook Section (NEW) -->
-    <section id="guestbook">
-        <h2>✍ Plz Sign My Guestbook! (Webmasters Only!) ✍</h2>
-        <p id="user-id-display">[USER ID: Loading...]</p>
-        <p style="text-align: center; color: #CCFFCC;">I wanna know who visited my site! Leave a message! Plz no trolls!</p>
-
-        <form id="guestbook-form" style="padding: 15px; border: 3px double #3366FF; background-color: #000033;">
-            <div style="margin-bottom: 10px;">
-                <label for="name" style="color: #FFFFFF; font-weight: bold; display: block; margin-bottom: 3px;">Your Name/Handle (REQUIRED):</label>
-                <input type="text" id="name" required style="width: 90%; padding: 5px; border: 2px inset #555555; background-color: #DDDDDD; color: #000000; font-family: monospace;">
-            </div>
-            <div style="margin-bottom: 15px;">
-                <label for="message" style="color: #FFFFFF; font-weight: bold; display: block; margin-bottom: 3px;">Your Message (Keep it Friendly!):</label>
-                <textarea id="message" required style="width: 90%; padding: 5px; border: 2px inset #555555; background-color: #DDDDDD; color: #000000; font-family: monospace; height: 80px;"></textarea>
-            </div>
-            <button type="submit" class="btn-style" style="background-color: #00CCFF; border-color: #33FFFF; margin: 0;">
-                CLICK HERE TO POST!
-            </button>
-            <div id="guestbook-message" style="color: #FF66FF; margin-top: 10px; font-weight: bold;"></div>
-        </form>
-
-        <h3 style="color: #99CCFF; text-align: center; margin-top: 30px; border-bottom: 1px dashed #99CCFF; padding-bottom: 5px;">~*~ Current Signatures ~*~</h3>
-        
-        <div id="guestbook-entries" style="margin-top: 15px;">
-            <!-- Entries will be dynamically inserted here -->
-            <p style="text-align: center; color: #888888;">Connecting to the shared server...</p>
-        </div>
-
-    </section>
-
-    <!-- 5. Other People's Websites Section -->
-    <section id="other-websites">
-        <h2>♥ Links to Cool People (My Buddies) ♥</h2>
-        
-        <!-- External Website Card: Placeholder (Rickroll) -->
-        <div style="text-align: center; margin-bottom: 10px;">
-            <p style="font-weight: bold;">
-                <img src="https://placehold.co/30x30/CC0000/FFFFFF?text=LINK" style="vertical-align: middle;">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color: #FF66FF; font-size: 14pt;">The Goatmilker's Awesome Site!</a>
-                <img src="https://placehold.co/30x30/CC0000/FFFFFF?text=LINK" style="vertical-align: middle;">
+        <div class="emotion-block">
+            <p class="emotion-text">
+                Its all my fault you're not here anymore.. i swear it was not the best of me.. its all my fault... i swear i know i've just changed for you.. i miss you bro...<br><br>Now that you’re no here, now I’m in distress<br>Having hopeless thoughts of you<br>Now you’ve fallen down, I can’t have you back<br>I can’t move on if I tried<br>I miss you, bro, yeah<br>I miss you, bro<br><br>Whoa<br>Why do all these bad things happen?<br>I’m lost in my sorrow, I won’t even try<br>‘Cause why do all these bad things happen?<br>Ohh<br>Why’d you have to be so happy?<br>It’s not even funny, it’s just plain sad<br>‘Cause why’d you have to be so happy?<br>Ohh
             </p>
         </div>
-    </section>
+    </div>
 
-    <!-- 6. Contact Section -->
-    <section id="contact">
-        <h2>✍ Get In Touch For No Reason At All ✍</h2>
-        
-        <p style="text-align: center;">You can find me on these cool platforms. Just click a button!</p>
-        
-        <center>
-            <a href="mailto:SonicTheHedgehogSEGA@proton.me" class="btn-style" style="background-color: #0000FF; border-color: #33FFFF;">EMAIL ME</a>
-            <a href="https://github.com/ToroInoue12" target="_blank" class="btn-style" style="background-color: #222244; border-color: #666699;">GITHUB</a>
-            <a href="https://x.com/KitMewFirey" target="_blank" class="btn-style" style="background-color: #111111; border-color: #666666;">X / Twitter</a>
-            <a href="https://bsky.app/profile/kitxp.bsky.social" target="_blank" class="btn-style" style="background-color: #00AAFF; border-color: #33FFFF;">BLUESKY</a>
-            <a href="https://www.youtube.com/channel/UCGeRYFlwAsNtaPip1rBIEBQ/channels" target="_blank" class="btn-style" style="background-color: #CC0000; border-color: #FF6666;">YOUTUBE CHANNEL</a>
-            <a href="https://kitxp.itch.io" target="_blank" class="btn-style" style="background-color: #FF6600; border-color: #FFCC00;">itch.io</a>
-        </center>
-    </section>
+    <!-- Empty space to enforce scrolling after the grave -->
+    <div class="spacer"></div>
 
-    <!-- FOOTER -->
-    <footer id="footer">
-        <p>This site is brought to you by KitXP | Powered by pure awesome. | &copy; 2004</p>
-        <!-- Classic Hit Counter -->
-        <p style="font-size: 10pt; color: #FF66FF; font-weight: bold;">You are visitor number: 
-            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=1" style="vertical-align: middle;">
-            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=9" style="vertical-align: middle;">
-            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=9" style="vertical-align: middle;">
-        </p>
-        <p>If you steal this site, you are the monster under my bed.</p>
-        <img src="https://placehold.co/100x20/33FFFF/000000?text=UNDER+CONSTRUCTION" style="margin-top: 5px;">
-    </footer>
-
-</div> <!-- End of #container -->
-
-
-    <!-- Background Music Player -->
-    <audio id="background-music" loop>
-        <source src="unity.mp3" type="audio/mpeg">
-        Your browser does support the audio element.
-    </audio>
-
-<!-- Firebase Imports -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { getFirestore, collection, addDoc, onSnapshot, query, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-    // --- GLOBAL VARIABLES (PROVIDED BY ENVIRONMENT) ---
-    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-    let app, db, auth;
-    let userId = 'loading...'; 
-
-    // Public collection path for shared data
-    const PUBLIC_COLLECTION_PATH = `/artifacts/${appId}/public/data/guestbook_entries`;
-
-    // --- FIREBASE SETUP & AUTHENTICATION ---
-    async function firebaseSetup() {
-        if (!firebaseConfig) {
-            console.error("Firebase config is missing. Cannot initialize Firestore.");
-            return;
-        }
-        
-        // 1. Initialize Firebase Services
-        app = initializeApp(firebaseConfig);
-        db = getFirestore(app);
-        auth = getAuth(app);
-        setLogLevel('Debug'); // Enable logging for debugging
-
-        // 2. Authenticate User
-        try {
-            if (initialAuthToken) {
-                await signInWithCustomToken(auth, initialAuthToken);
-            } else {
-                await signInAnonymously(auth);
-            }
-        } catch (error) {
-            console.error("Firebase Authentication Error (Guestbook may not work):", error);
-        }
-
-        // 3. Listen for Auth State to get the User ID
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                userId = user.uid;
-                document.getElementById('user-id-display').textContent = `[USER ID: ${userId}] (Public Sign-in)`;
-                loadGuestbook(); // Load data only after auth is ready
-            } else {
-                // Should not happen, but safe fallback
-                userId = 'unauthenticated_' + crypto.randomUUID();
-                document.getElementById('user-id-display').textContent = `[USER ID: ${userId}] (Temporary)`;
-                loadGuestbook(); 
-            }
-        });
-    }
-
-    // --- GUESTBOOK LOGIC (USING FIRESTORE) ---
-    function renderGuestbookEntries(entries) {
-        const container = document.getElementById('guestbook-entries');
-        if (!container) return;
-
-        // Sort by timestamp descending (most recent at top)
-        entries.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0)); 
-        
-        if (entries.length === 0) {
-            container.innerHTML = '<p style="text-align: center; color: #FF66FF;">Be the first to sign the Guestbook! Plz be nice :)</p>';
-            return;
-        }
-
-        container.innerHTML = entries.map(entry => {
-            // Sanitize input for display
-            const safeName = (entry.name || 'Anonymous').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            const safeMessage = (entry.message || 'No message').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-            // Firestore timestamp handling
-            const ts = entry.timestamp ? (entry.timestamp.toDate ? entry.timestamp.toDate() : new Date(entry.timestamp)) : new Date();
-            const date = ts.toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' });
-            const posterId = entry.posterId || 'Unknown';
-            
-            return `
-                <div class="guestbook-entry-box">
-                    <p class="guestbook-entry-name">
-                        ${safeName} <span class="guestbook-entry-date">(Posted: ${date} by ${posterId.substring(0, 8)}...)</span>
-                    </p>
-                    <p class="guestbook-entry-message">
-                        ${safeMessage}
-                    </p>
-                </div>
-            `;
-        }).join('');
-    }
-
-    function loadGuestbook() {
-        if (!db || userId === 'loading...') {
-            // Wait for firebaseSetup to complete
-            return; 
-        }
-        
-        const entriesRef = collection(db, PUBLIC_COLLECTION_PATH);
-        const q = query(entriesRef);
-        
-        // Real-time listener: All users see the same data as soon as it changes
-        onSnapshot(q, (snapshot) => {
-            const entries = [];
-            snapshot.forEach((doc) => {
-                entries.push({ id: doc.id, ...doc.data() });
-            });
-            renderGuestbookEntries(entries);
-        }, (error) => {
-            console.error("Firestore onSnapshot error:", error);
-            document.getElementById('guestbook-entries').innerHTML = '<p style="text-align: center; color: #FF0000; font-weight: bold;">ERROR: Could not load shared Guestbook! Check console.</p>';
-        });
-    }
-
-    async function handleGuestbookSubmit(event) {
-        event.preventDefault();
-        const statusMessage = document.getElementById('guestbook-message');
-        
-        if (!db || userId === 'loading...') {
-            statusMessage.textContent = "Error: Database still loading!";
-            return;
-        }
-
-        const nameInput = document.getElementById('name');
-        const messageInput = document.getElementById('message');
-
-        const name = nameInput.value.trim().substring(0, 50); 
-        const message = messageInput.value.trim().substring(0, 500); 
-
-        if (!name || !message) {
-            statusMessage.textContent = "Hey! Both fields are required!";
-            return;
-        }
-
-        const newEntry = {
-            name: name,
-            message: message,
-            timestamp: new Date(), 
-            posterId: userId,
-        };
-        
-        statusMessage.textContent = "Posting message to the shared web... Plz wait!";
-
-        try {
-            await addDoc(collection(db, PUBLIC_COLLECTION_PATH), newEntry);
-            statusMessage.textContent = "Message posted to the public server! TY!";
-            nameInput.value = '';
-            messageInput.value = '';
-            // onSnapshot listener handles the re-render automatically
-        } catch (e) {
-            console.error("Error adding document:", e);
-            statusMessage.textContent = "FATAL ERROR: Could not post message! Is Firebase configured?";
-        }
-    }
-
-
-    // --- INITIALIZATION ---
-    document.addEventListener('DOMContentLoaded', () => {
-        // Start Firebase setup immediately
-        firebaseSetup();
-        
-        const musicPlayButton = document.getElementById('music-play-button');
-        const backgroundMusic = document.getElementById('background-music');
-
-        // Music Play Logic
-        if (musicPlayButton && backgroundMusic) {
-            musicPlayButton.addEventListener('click', () => {
-                backgroundMusic.play().then(() => {
-                    musicPlayButton.style.display = 'none';
-                    console.log("Music started playing!");
-                }).catch(error => {
-                    console.error("Music playback failed:", error);
-                    musicPlayButton.textContent = "Error playing music, try refreshing!";
-                });
-            });
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('#nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        const guestbookForm = document.getElementById('guestbook-form');
-        if (guestbookForm) {
-            guestbookForm.addEventListener('submit', handleGuestbookSubmit);
-        }
-        
-        // --- EASTER EGG: KONAMI CODE LISTENER ---
-        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
-        let konamiIndex = 0;
-
-        function checkKonamiCode(event) {
-            if (event.code === konamiCode[konamiIndex]) {
-                konamiIndex++;
-                if (konamiIndex === konamiCode.length) {
-                    console.log("%c\n!!! KXP MODE ACTIVATED !!!", 
-                        "font-size: 24px; color: #FF66FF; text-shadow: 2px 2px #33FFFF; font-weight: bold;");
-                    console.log("\n~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
-                    console.log("%cCHEAT CODE ACCEPTED. YOU ARE A TRUE WEBMASTER.", "color: #FFFFFF; font-size: 16px;");
-                    console.log("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
-                    konamiIndex = 0; 
-                    document.body.style.transform = 'rotate(3deg)'; // Small visual cue
-                    setTimeout(() => {
-                        document.body.style.transform = 'rotate(0deg)';
-                    }, 1000);
-                }
-            } else {
-                // Reset if the wrong key is pressed, unless it's the start key
-                if (event.code === konamiCode[0]) {
-                    konamiIndex = 1; 
-                } else {
-                    konamiIndex = 0; 
-                }
-            }
-        }
-        document.addEventListener('keydown', checkKonamiCode);
-    });
-</script>
 </body>
 </html>
