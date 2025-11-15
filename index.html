@@ -3,293 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitXP | the legend :0</title>
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <title>~*~ KiTxP's wEb SiTe Of AwEsOmE ~*~</title>
     
-   
+    <!-- !!! BLUESKY HANDLE VERIFICATION META TAG !!! -->
     <meta name="atproto-did" content="did:plc:lgaw7nzpymtn5ljoi37ovdv7">
-
+    
     <style>
-        /* Custom font import for aesthetics */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        
+        /* BASE 2000s STYLES (MORE BLUE!) */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Tailwind bg-slate-900 */
-            /* Added GIF background */
-            background-image: url('cat.gif');
-            background-repeat: repeat;
+            /* Darker Blue Tiled background pattern */
+            background-color: #000044;
+            background-image: url('https://placehold.co/100x100/111166/111166/pattern?text=');
+            color: #33FFFF; /* Electric Cyan Text */
+            font-family: "Comic Sans MS", fantasy, cursive, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            text-align: center; /* Center everything */
         }
-        /* Sticky header effect */
-        #navbar.sticky {
-            backdrop-filter: blur(10px);
-            background-color: rgba(15, 23, 42, 0.9);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        
+        /* MAIN CONTAINER (Simulating the fixed-width table layout) */
+        #container {
+            width: 780px; 
+            margin: 0 auto;
+            border: 10px groove #00FFFF; /* Bright Cyan Border */
+            background-color: #000055; /* Slightly lighter inner background */
+            padding: 15px;
+            text-align: left;
+            box-shadow: 5px 5px 15px #000000;
         }
-        .section-title {
-            position: relative;
+
+        /* HEADER AND BANNERS */
+        #header {
+            background-color: #3366FF; /* Vibrant Blue */
+            color: #FFFFFF; /* White text for contrast */
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 5px ridge #FFFFFF; 
+        }
+        #header h1 {
+            font-size: 32pt;
+            text-shadow: 3px 3px #00FFCC; /* Aqua Shadow */
+            margin: 0;
+        }
+        #header p {
+            font-style: italic;
+            margin: 5px 0 0;
+            font-size: 10pt;
+        }
+        
+        /* NAVIGATION */
+        #nav {
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 5px 0;
+            border: 2px dashed #FF66FF; /* Pink/Magenta dashed border for accent */
+        }
+        #nav a {
+            color: #FFFFFF; /* White links */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12pt;
+            padding: 5px 10px;
+            border: 2px outset #00FFFF; /* Cyan Button/Outset look */
+            background-color: #0000AA; /* Deep Blue background */
+            margin: 0 5px;
             display: inline-block;
         }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 70%;
-            height: 3px;
-            background-color: #6366f1; /* Tailwind indigo-500 */
-            border-radius: 9999px;
+        #nav a:hover {
+            color: #000000; /* Black on hover */
+            background-color: #33FFFF; /* Aqua hover */
+            border: 2px inset #00FFFF; 
+        }
+
+        /* SECTION STYLES (Groovy Fieldsets) */
+        section {
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 4px solid #00FFFF;
+            background-color: #000066; /* Slightly different background for sections */
+        }
+        section h2 {
+            font-size: 20pt;
+            color: #33FFFF; /* Aqua/Cyan */
+            text-decoration: underline;
+            margin-top: 0;
+            border-bottom: 3px dotted #FF66FF; /* Magenta dotted bottom border */
+            padding-bottom: 5px;
+        }
+
+        /* GENERAL TEXT AND LINKS */
+        p, li {
+            font-size: 11pt;
+            line-height: 1.5;
+        }
+        a:not(#nav a) {
+            color: #99CCFF; /* Light Blue/White links */
+            text-decoration: underline;
+        }
+        a:not(#nav a):hover {
+            color: #FF00FF; /* Magenta on hover */
+        }
+
+        /* MARQUEE EFFECT */
+        #scroller {
+            background-color: #FF66FF; /* Magenta/Pink accent */
+            color: #000000;
+            padding: 5px;
+            font-weight: bold;
+            border: 3px double #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        /* PROJECT CARDS (Simulated Table/Block) */
+        .project-card {
+            width: 48%; 
+            float: left;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 3px dashed #33FFFF; /* Cyan dashed border */
+            background-color: #000077;
+            text-align: center;
+        }
+        .project-card:nth-child(odd) {
+            margin-right: 4%; 
+        }
+        .project-card h3 {
+            color: #FF66FF; /* Pink/Magenta accent */
+            font-size: 16pt;
+            margin: 5px 0;
+        }
+        .project-card img {
+            border: 3px solid #FFFFFF;
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .project-link-button {
+            display: block;
+            margin: 5px auto;
+            padding: 5px 10px;
+            background-color: #3366FF; /* Vibrant Blue button */
+            color: white;
+            border: 3px outset #99CCFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-link-button:hover {
+            background-color: #0055EE;
+            border: 3px inset #99CCFF;
+        }
+        .github-link {
+            background-color: #222244; /* Darker Gray/Blue button */
+            border: 3px outset #666699;
+        }
+
+        /* FOOTER */
+        #footer {
+            clear: both;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 5px solid #33FFFF;
+            font-size: 9pt;
+            text-align: center;
+            color: #AAAAAA;
+        }
+
+        /* BUTTONS */
+        .btn-style {
+            padding: 8px 20px;
+            background-color: #3366FF; /* Vibrant Blue */
+            color: #FFFFFF;
+            border: 5px ridge #99CCFF;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-style:hover {
+            background-color: #0055EE;
+            border: 5px groove #99CCFF;
+        }
+        
+        /* GUESTBOOK SPECIFIC STYLES */
+        #guestbook-form input, #guestbook-form textarea {
+            box-sizing: border-box; 
+        }
+        .guestbook-entry-box {
+            border: 2px solid #33FFFF; 
+            padding: 10px; 
+            margin-bottom: 15px; 
+            background-color: #000066; 
+            box-shadow: 2px 2px #FF66FF; /* Magenta shadow */
+        }
+        .guestbook-entry-name {
+            margin: 0; 
+            font-weight: bold; 
+            color: #99CCFF; 
+            border-bottom: 1px dotted #99CCFF;
+        }
+        .guestbook-entry-date {
+            font-size: 8pt; 
+            color: #888888; 
+            font-weight: normal;
+        }
+        .guestbook-entry-message {
+            margin-top: 5px; 
+            color: #FFFFFF;
+        }
+        #user-id-display {
+            font-size: 9pt;
+            text-align: center;
+            color: #FF66FF;
+            margin-bottom: 10px;
         }
     </style>
 </head>
-<body class="text-white">
+<body>
 
-    <!-- Navigation Bar --><nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-extrabold text-indigo-400 tracking-wider">KitXP</a>
-            <div class="space-x-4 hidden sm:flex">
-                <a href="#about" class="hover:text-indigo-400 transition duration-150">About Me</a>
-                <a href="#projects" class="hover:text-indigo-400 transition duration-150">Projects</a>
-                <a href="#other-websites" class="hover:text-indigo-400 transition duration-150">Other Websites</a>
-                <a href="#contact" class="hover:text-indigo-400 transition duration-150">Contact</a>
-            </div>
-            <!-- Simple Mobile Menu Icon (non-functional for this single-file mandate) --><button class="sm:hidden text-white p-2 rounded-lg hover:bg-slate-800">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
-            </button>
-        </div>
+<div id="container">
+
+    <!-- HEADER (The classic Geocities/Angelfire banner) -->
+    <header id="header">
+        <h1>[ KitXP ]</h1>
+        <p>You have found the coolest site on the internet! Enter at your own risk!</p>
+    </header>
+
+    <!-- MARQUEE (Essential 2000s feature) -->
+    <div id="scroller">
+        <marquee behavior="alternate" direction="left" scrollamount="3">
+            !!! WELCOME TO MY WEB SHRINE!!! &lt;-- Best Viewed with Internet Explorer 4.0 or Higher!
+        </marquee>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="nav">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#guestbook">GUESTBOOK</a>
+        <a href="#other-websites">BUDDIES</a>
+        <a href="#contact">CONTACT</a>
     </nav>
+    
+    <!-- 1. Hero Section -->
+    <section id="home">
+        <h2>★ Welcome to My Homepage! ★</h2>
+        
+        <center>
+            <!-- Animated GIF Placeholder -->
+            <img src="kitxp.gif" alt="Animated Logo" style="margin-bottom: 15px; border: 3px solid #00FFFF;">
+        </center>
 
-    <main class="pt-20">
-        <!-- 1. Hero Section --><section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
-            <div class="max-w-4xl space-y-6">
-                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight tracking-tighter">
-                    <span class="text-indigo-400">KitXP</span> | Web Dev Obsessed
-                </h1>
-                <p class="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto">
-                    A British kid who freakin loves HTML too much... I'm obsessed with JavaScript, its like all i can think of is.. Sonic, Klonoa, Nintendo Wii U, Javascript and HTML ohhhh AND TAILWIND CSS :00000
-                </p>
-                
-                <!-- Buttons Wrapper for alignment -->
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.03] animate-pulse">
-                        <i data-lucide="rocket" class="w-5 h-5 mr-2"></i>
-                        Explore My Web Projects
-                    </a>
-                    <!-- Music Play Button -->
-                    <button id="music-play-button" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 transform hover:scale-[1.03]">
-                        <i data-lucide="volume-2" class="w-5 h-5 mr-2"></i>
-                        play the dang music if your browser hates you
-                    </button>
-                </div>
+        <p>Hey there! I'm KitXP, a British kid who is totally obsessed with making stuff for the web! My heroes are Sonic and Klonoa, and I still think the Nintendo Wii U is boss. I spend all my time coding crazy stuff in JavaScript and HTML (yeah, I use that new 'Tailwind' thing, it's pretty neat!).</p>
+        
+        <p>
+            <center>
+                <a href="#projects" class="btn-style" style="background-color: #00AAFF; border-color: #33FFFF;">
+                    &gt;&gt; START EXPLORING MY PROJECTS NOW &lt;&lt;
+                </a>
+                <button id="music-play-button" class="btn-style" style="background-color: #990000; border-color: #FF0000;">
+                    Play The DANG MUSIC
+                </button>
+            </center>
+        </p>
 
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about">
+        <h2>☺ About Your Friendly Neighbourhood KitXP ☺</h2>
+        
+        <div style="float: right; margin: 0 0 10px 15px; border: 5px solid #FF66FF;">
+            <!-- Profile Picture -->
+            <img src="kitxp.png" alt="KitXP's Profile Picture" width="150" height="150" style="display: block;">
+        </div>
+        
+        <p>I'm just a silly, obsessed JavaScript kid with too much passion for the web. I'm British, and yeah, I spend all my time solving challenging coding problems just for the fun of it! I live and breathe HTML, lol.</p>
+        
+        <!-- User's specific, desired line -->
+        <p style="font-size: 14pt; color: #FF66FF; font-weight: bold; text-shadow: 2px 2px #000000;">I even made a nes emulator. crazy shit man</p>
+
+        <div style="clear: both;"></div>
+    </section>
+
+    <!-- 3. Projects Section -->
+    <section id="projects">
+        <h2>&#9733; My Mega Awesome Projects &#9733;</h2>
+        
+        <!-- Project Card 1: KXPReloaded (NES Emulator) -->
+        <div class="project-card">
+            <h3>KXPReloaded: NES Emu!</h3>
+            <img src="kxpreloaded.png" alt="Preview of KXPReloaded NES Emulator">
+            <p style="font-size: 10pt; color: #CCCCCC;">A crazy challenge realized in code: a complete NES emulator made just with JavaScript. From idea to reality—I can't believe I pulled that off!</p>
+            <a href="https://toroinoue12.github.io/KXPReloadedWebsite/" target="_blank" class="project-link-button">
+                Download NOW &lt;3
+            </a>
+            <a href="https://github.com/ToroInoue12/KXPReloaded" target="_blank" class="project-link-button github-link">
+                (View) GitHub Source
+            </a>
+        </div>
+
+        <!-- Project Card 2: Save The World (Recreation) -->
+        <div class="project-card">
+            <h3>Save The World (Recreation)</h3>
+            <img src="savetheworld.png" 
+                onerror="this.onerror=null; this.src='https://placehold.co/400x300/4f46e5/ffffff?text=Save+The+World';" 
+                alt="Preview of Save The World Recreation">
+            <p style="font-size: 10pt; color: #CCCCCC;">It's a faithful HTML recreation of Outfit7's legendary app. You click the button, you save the world. Simple as. True heroism!</p>
+            <a href="https://toroinoue12.github.io/SavetheWorld/" target="_blank" class="project-link-button">
+                Visit the HERO SITE
+            </a>
+            <a href="https://github.com/ToroInoue12/SavetheWorld" target="_blank" class="project-link-button github-link">
+                (View) GitHub Source
+            </a>
+        </div>
+
+        <div style="clear: both;"></div>
+    </section>
+    
+    <!-- 4. Guestbook Section (NEW) -->
+    <section id="guestbook">
+        <h2>✍ Plz Sign My Guestbook! (Webmasters Only!) ✍</h2>
+        <p id="user-id-display">[USER ID: Loading...]</p>
+        <p style="text-align: center; color: #CCFFCC;">I wanna know who visited my site! Leave a message! Plz no trolls!</p>
+
+        <form id="guestbook-form" style="padding: 15px; border: 3px double #3366FF; background-color: #000033;">
+            <div style="margin-bottom: 10px;">
+                <label for="name" style="color: #FFFFFF; font-weight: bold; display: block; margin-bottom: 3px;">Your Name/Handle (REQUIRED):</label>
+                <input type="text" id="name" required style="width: 90%; padding: 5px; border: 2px inset #555555; background-color: #DDDDDD; color: #000000; font-family: monospace;">
             </div>
-        </section>
-
-        <!-- 2. About Me Section --><section id="about" class="py-20 px-6 bg-slate-800">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold mb-12 section-title">About Me</h2>
-                
-                <div class="lg:grid lg:grid-cols-4 gap-12 items-center">
-                    <!-- Profile Picture --><div class="lg:col-span-1 flex justify-center lg:justify-start mb-8 lg:mb-0">
-                        <img src="kitxp.png" alt="KitXP's Profile Picture" class="w-48 h-48 object-cover rounded-full border-4 border-indigo-500 shadow-xl">
-                    </div>
-
-                    <!-- Text Content (Now spans 3 columns) --><div class="lg:col-span-3 space-y-6 text-slate-300 text-lg">
-                        <p>I'm **KitXP**, a British developer who is completely hooked on HTML and JavaScript—seriously, I spend all my time solving challenging coding problems just for the fun of it.</p>
-                        <p>You could say I'm just a silly, obsessed JavaScript kid with too much passion for the web!</p>
-                        <!-- User's specific, desired line --><p class="text-2xl font-extrabold text-indigo-400 italic">I even made a nes emulator. crazy shit man</p>
-                    </div>
-
-                    <!-- Skills & Toolkit (REMOVED) --></div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="color: #FFFFFF; font-weight: bold; display: block; margin-bottom: 3px;">Your Message (Keep it Friendly!):</label>
+                <textarea id="message" required style="width: 90%; padding: 5px; border: 2px inset #555555; background-color: #DDDDDD; color: #000000; font-family: monospace; height: 80px;"></textarea>
             </div>
-        </section>
+            <button type="submit" class="btn-style" style="background-color: #00CCFF; border-color: #33FFFF; margin: 0;">
+                CLICK HERE TO POST!
+            </button>
+            <div id="guestbook-message" style="color: #FF66FF; margin-top: 10px; font-weight: bold;"></div>
+        </form>
 
-        <!-- 3. Projects Section (Updated to Grid Tile Layout) --><section id="projects" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold mb-16 section-title">Featured Projects</h2>
-                
-                <!-- Responsive Grid Container: 2 cols on mobile, 3 on tablet, 4 on large screens --><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> 
-                    
-                    <!-- Project Card 1: KXPReloaded (NES Emulator) --><div class="bg-slate-800 rounded-xl shadow-2xl transition duration-300 hover:ring-4 hover:ring-indigo-500/50 overflow-hidden group">
-                        
-                        <!-- Image Area (Visual focus) --><div class="relative overflow-hidden">
-                            <!-- Image Source updated to kxpreloaded.png --><img src="kxpreloaded.png" 
-                                alt="Preview of KXPReloaded NES Emulator" 
-                                class="w-full object-cover transition duration-300 group-hover:scale-105">
-                        </div>
-            
-                        <!-- Text Content and Buttons --><div class="p-4 space-y-3">
-                            <h3 class="text-xl font-extrabold text-indigo-400 truncate">KXPReloaded</h3>
-                            <!-- SHORTENED DESCRIPTION HERE -->
-                            <p class="text-sm text-slate-400">A dreamer's challenge realized in code: a complete NES emulator built entirely in JavaScript. From idea to reality—crazy, but true.</p>
-                            
-                            <div class="flex flex-col gap-2 pt-2">
-                                <a href="https://toroinoue12.github.io/KXPReloadedWebsite/" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition">
-                                    <i data-lucide="play" class="w-4 h-4 mr-2"></i>
-                                    Download <:D
-                                </a>
-                                <a href="https://github.com/ToroInoue12/KXPReloaded" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-indigo-400 hover:bg-slate-700 transition border border-indigo-400">
-                                    <i data-lucide="github" class="w-4 h-4 mr-2"></i>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <h3 style="color: #99CCFF; text-align: center; margin-top: 30px; border-bottom: 1px dashed #99CCFF; padding-bottom: 5px;">~*~ Current Signatures ~*~</h3>
+        
+        <div id="guestbook-entries" style="margin-top: 15px;">
+            <!-- Entries will be dynamically inserted here -->
+            <p style="text-align: center; color: #888888;">Connecting to the shared server...</p>
+        </div>
 
-                    <!-- Project Card 2: Save The World (Recreation) --><div class="bg-slate-800 rounded-xl shadow-2xl transition duration-300 hover:ring-4 hover:ring-indigo-500/50 overflow-hidden group">
-                        
-                        <!-- Image Area (Visual focus) --><div class="relative overflow-hidden">
-                            <!-- Image path updated to savetheworld.png --><img src="savetheworld.png" 
-                                onerror="this.onerror=null; this.src='https://placehold.co/400x300/4f46e5/ffffff?text=Save+The+World';" 
-                                alt="Preview of Save The World Recreation" 
-                                class="w-full object-cover transition duration-300 group-hover:scale-105">
-                        </div>
-            
-                        <!-- Text Content and Buttons --><div class="p-4 space-y-3">
-                            <h3 class="text-xl font-extrabold text-indigo-400 truncate">Save The World (Recreation)</h3>
-                            <!-- SHORTENED DESCRIPTION HERE -->
-                            <p class="text-sm text-slate-400">A faithful HTML recreation of Outfit7's legendary app. Others might say it's just a button that saves an image, but we know the truth: this is a monument to heroism and your power to save the entire world with a single, heroic click.</p>
-                            
-                            <div class="flex flex-col gap-2 pt-2">
-                                <a href="https://toroinoue12.github.io/SavetheWorld/" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition">
-                                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
-                                    Website
-                                </a>
-                                <a href="https://github.com/ToroInoue12/SavetheWorld" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-indigo-400 hover:bg-slate-700 transition border border-indigo-400">
-                                    <i data-lucide="github" class="w-4 h-4 mr-2"></i>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    </section>
 
-                </div>
-            </div>
-        </section>
+    <!-- 5. Other People's Websites Section -->
+    <section id="other-websites">
+        <h2>♥ Links to Cool People (My Buddies) ♥</h2>
+        
+        <!-- External Website Card: Placeholder (Rickroll) -->
+        <div style="text-align: center; margin-bottom: 10px;">
+            <p style="font-weight: bold;">
+                <img src="https://placehold.co/30x30/CC0000/FFFFFF?text=LINK" style="vertical-align: middle;">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color: #FF66FF; font-size: 14pt;">The Goatmilker's Awesome Site!</a>
+                <img src="https://placehold.co/30x30/CC0000/FFFFFF?text=LINK" style="vertical-align: middle;">
+            </p>
+        </div>
+    </section>
 
-        <!-- 4. Other People's Websites Section --><section id="other-websites" class="py-20 px-6 bg-slate-800">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold mb-16 section-title">Your Websites - Other peoples websites!</h2>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> 
-                    
-                    <!-- External Website Card: Placeholder (Rickroll) -->
-                    <div class="bg-slate-900 rounded-xl shadow-2xl transition duration-300 hover:ring-4 hover:ring-red-500/50 overflow-hidden group">
-                        
-                        <!-- Image Area (Visual focus - Gray Placeholder) -->
-                        <div class="relative overflow-hidden">
-                            <img src="https://placehold.co/400x300/334155/ffffff?text=External+Link" 
-                                alt="Placeholder Image for External Site" 
-                                class="w-full object-cover transition duration-300 group-hover:scale-105">
-                        </div>
-            
-                        <!-- Text Content and Buttons -->
-                        <div class="p-4 space-y-3">
-                            <h3 class="text-xl font-extrabold text-red-400 truncate">placeholder</h3>
-                            <p class="text-sm text-slate-400">its the goatmilker</p>
-                            
-                            <div class="flex flex-col gap-2 pt-2">
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 transition">
-                                    <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
-                                    Visit
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+    <!-- 6. Contact Section -->
+    <section id="contact">
+        <h2>✍ Get In Touch For No Reason At All ✍</h2>
+        
+        <p style="text-align: center;">You can find me on these cool platforms. Just click a button!</p>
+        
+        <center>
+            <a href="mailto:SonicTheHedgehogSEGA@proton.me" class="btn-style" style="background-color: #0000FF; border-color: #33FFFF;">EMAIL ME</a>
+            <a href="https://github.com/ToroInoue12" target="_blank" class="btn-style" style="background-color: #222244; border-color: #666699;">GITHUB</a>
+            <a href="https://x.com/KitMewFirey" target="_blank" class="btn-style" style="background-color: #111111; border-color: #666666;">X / Twitter</a>
+            <a href="https://bsky.app/profile/kitxp.bsky.social" target="_blank" class="btn-style" style="background-color: #00AAFF; border-color: #33FFFF;">BLUESKY</a>
+            <a href="https://www.youtube.com/channel/UCGeRYFlwAsNtaPip1rBIEBQ/channels" target="_blank" class="btn-style" style="background-color: #CC0000; border-color: #FF6666;">YOUTUBE CHANNEL</a>
+            <a href="https://kitxp.itch.io" target="_blank" class="btn-style" style="background-color: #FF6600; border-color: #FFCC00;">itch.io</a>
+        </center>
+    </section>
 
-        <!-- 5. Contact Section --><section id="contact" class="py-20 px-6 bg-slate-900">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-4">Contact Me for no Reason.</h2>
-                <p class="text-xl text-slate-400 mb-10">Yes. contact me.</p>
-                
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="mailto:SonicTheHedgehogSEGA@proton.me" class="flex items-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 transition transform hover:scale-105 shadow-lg">
-                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
-                        Email Me
-                    </a>
-                    <a href="https://github.com/ToroInoue12" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
-                        <i data-lucide="github" class="w-5 h-5 mr-3"></i>
-                        GitHub
-                    </a>
-                    <a href="https://x.com/KitMewFirey" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
-                        <i data-lucide="twitter" class="w-5 h-5 mr-3"></i>
-                        Twitter/X
-                    </a>
-                    <a href="https://bsky.app/profile/kitxp.bsky.social" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
-                        <i data-lucide="message-square" class="w-5 h-5 mr-3"></i>
-                        Bluesky
-                    </a>
-                    <a href="https://kitxp.itch.io" target="_blank" class="flex items-center px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 transition transform hover:scale-105 shadow-lg">
-                        <i data-lucide="gamepad-2" class="w-5 h-5 mr-3"></i>
-                        itch.io
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer --><footer class="text-center py-6 border-t border-slate-700 text-sm text-slate-500">
-        &copy; 2025 KitXP. If you steal this site, you are the monster under my bed.
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>This site is brought to you by KitXP | Powered by pure awesome. | &copy; 2004</p>
+        <!-- Classic Hit Counter -->
+        <p style="font-size: 10pt; color: #FF66FF; font-weight: bold;">You are visitor number: 
+            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=1" style="vertical-align: middle;">
+            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=9" style="vertical-align: middle;">
+            <img src="https://placehold.co/20x30/FF66FF/FFFFFF?text=9" style="vertical-align: middle;">
+        </p>
+        <p>If you steal this site, you are the monster under my bed.</p>
+        <img src="https://placehold.co/100x20/33FFFF/000000?text=UNDER+CONSTRUCTION" style="margin-top: 5px;">
     </footer>
+
+</div> <!-- End of #container -->
+
 
     <!-- Background Music Player -->
     <audio id="background-music" loop>
-        <!-- Removed 'autoplay' attribute here -->
         <source src="unity.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        Your browser does support the audio element.
     </audio>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+<!-- Firebase Imports -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // JavaScript for smooth scrolling and sticky nav bar effect
-        document.addEventListener('DOMContentLoaded', () => {
-            const navbar = document.getElementById('navbar');
-            const musicPlayButton = document.getElementById('music-play-button');
-            const backgroundMusic = document.getElementById('background-music');
+    // --- GLOBAL VARIABLES (PROVIDED BY ENVIRONMENT) ---
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+    const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
-            // --- Music Play Logic ---
-            if (musicPlayButton && backgroundMusic) {
-                // Check if music is playing. If it successfully starts (e.g., if the user clicks anywhere else), hide the button.
-                // Since 'autoplay' is removed, we assume it's not playing initially... sadly
-                
-                musicPlayButton.addEventListener('click', () => {
-                    backgroundMusic.play().then(() => {
-                        // Successfully started playback, hide the button fuck yeah bitch
-                        musicPlayButton.style.display = 'none';
-                    }).catch(error => {
-                        // Failed to play (this often happens if the user interacts too fast before the page is fully ready)
-                        console.error("Music playback failed:", error);
-                        musicPlayButton.textContent = "Error playing music, try again?";
-                    });
-                });
+    let app, db, auth;
+    let userId = 'loading...'; 
+
+    // Public collection path for shared data
+    const PUBLIC_COLLECTION_PATH = `/artifacts/${appId}/public/data/guestbook_entries`;
+
+    // --- FIREBASE SETUP & AUTHENTICATION ---
+    async function firebaseSetup() {
+        if (!firebaseConfig) {
+            console.error("Firebase config is missing. Cannot initialize Firestore.");
+            return;
+        }
+        
+        // 1. Initialize Firebase Services
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
+        setLogLevel('Debug'); // Enable logging for debugging
+
+        // 2. Authenticate User
+        try {
+            if (initialAuthToken) {
+                await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+                await signInAnonymously(auth);
             }
+        } catch (error) {
+            console.error("Firebase Authentication Error (Guestbook may not work):", error);
+        }
 
-            // Toggle sticky class on scroll
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('sticky');
-                } else {
-                    navbar.classList.remove('sticky');
-                }
+        // 3. Listen for Auth State to get the User ID
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                userId = user.uid;
+                document.getElementById('user-id-display').textContent = `[USER ID: ${userId}] (Public Sign-in)`;
+                loadGuestbook(); // Load data only after auth is ready
+            } else {
+                // Should not happen, but safe fallback
+                userId = 'unauthenticated_' + crypto.randomUUID();
+                document.getElementById('user-id-display').textContent = `[USER ID: ${userId}] (Temporary)`;
+                loadGuestbook(); 
+            }
+        });
+    }
+
+    // --- GUESTBOOK LOGIC (USING FIRESTORE) ---
+    function renderGuestbookEntries(entries) {
+        const container = document.getElementById('guestbook-entries');
+        if (!container) return;
+
+        // Sort by timestamp descending (most recent at top)
+        entries.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0)); 
+        
+        if (entries.length === 0) {
+            container.innerHTML = '<p style="text-align: center; color: #FF66FF;">Be the first to sign the Guestbook! Plz be nice :)</p>';
+            return;
+        }
+
+        container.innerHTML = entries.map(entry => {
+            // Sanitize input for display
+            const safeName = (entry.name || 'Anonymous').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const safeMessage = (entry.message || 'No message').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            // Firestore timestamp handling
+            const ts = entry.timestamp ? (entry.timestamp.toDate ? entry.timestamp.toDate() : new Date(entry.timestamp)) : new Date();
+            const date = ts.toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' });
+            const posterId = entry.posterId || 'Unknown';
+            
+            return `
+                <div class="guestbook-entry-box">
+                    <p class="guestbook-entry-name">
+                        ${safeName} <span class="guestbook-entry-date">(Posted: ${date} by ${posterId.substring(0, 8)}...)</span>
+                    </p>
+                    <p class="guestbook-entry-message">
+                        ${safeMessage}
+                    </p>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function loadGuestbook() {
+        if (!db || userId === 'loading...') {
+            // Wait for firebaseSetup to complete
+            return; 
+        }
+        
+        const entriesRef = collection(db, PUBLIC_COLLECTION_PATH);
+        const q = query(entriesRef);
+        
+        // Real-time listener: All users see the same data as soon as it changes
+        onSnapshot(q, (snapshot) => {
+            const entries = [];
+            snapshot.forEach((doc) => {
+                entries.push({ id: doc.id, ...doc.data() });
             });
+            renderGuestbookEntries(entries);
+        }, (error) => {
+            console.error("Firestore onSnapshot error:", error);
+            document.getElementById('guestbook-entries').innerHTML = '<p style="text-align: center; color: #FF0000; font-weight: bold;">ERROR: Could not load shared Guestbook! Check console.</p>';
+        });
+    }
 
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+    async function handleGuestbookSubmit(event) {
+        event.preventDefault();
+        const statusMessage = document.getElementById('guestbook-message');
+        
+        if (!db || userId === 'loading...') {
+            statusMessage.textContent = "Error: Database still loading!";
+            return;
+        }
+
+        const nameInput = document.getElementById('name');
+        const messageInput = document.getElementById('message');
+
+        const name = nameInput.value.trim().substring(0, 50); 
+        const message = messageInput.value.trim().substring(0, 500); 
+
+        if (!name || !message) {
+            statusMessage.textContent = "Hey! Both fields are required!";
+            return;
+        }
+
+        const newEntry = {
+            name: name,
+            message: message,
+            timestamp: new Date(), 
+            posterId: userId,
+        };
+        
+        statusMessage.textContent = "Posting message to the shared web... Plz wait!";
+
+        try {
+            await addDoc(collection(db, PUBLIC_COLLECTION_PATH), newEntry);
+            statusMessage.textContent = "Message posted to the public server! TY!";
+            nameInput.value = '';
+            messageInput.value = '';
+            // onSnapshot listener handles the re-render automatically
+        } catch (e) {
+            console.error("Error adding document:", e);
+            statusMessage.textContent = "FATAL ERROR: Could not post message! Is Firebase configured?";
+        }
+    }
+
+
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Start Firebase setup immediately
+        firebaseSetup();
+        
+        const musicPlayButton = document.getElementById('music-play-button');
+        const backgroundMusic = document.getElementById('background-music');
+
+        // Music Play Logic
+        if (musicPlayButton && backgroundMusic) {
+            musicPlayButton.addEventListener('click', () => {
+                backgroundMusic.play().then(() => {
+                    musicPlayButton.style.display = 'none';
+                    console.log("Music started playing!");
+                }).catch(error => {
+                    console.error("Music playback failed:", error);
+                    musicPlayButton.textContent = "Error playing music, try refreshing!";
+                });
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('#nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
-    </script>
+
+        const guestbookForm = document.getElementById('guestbook-form');
+        if (guestbookForm) {
+            guestbookForm.addEventListener('submit', handleGuestbookSubmit);
+        }
+        
+        // --- EASTER EGG: KONAMI CODE LISTENER ---
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        let konamiIndex = 0;
+
+        function checkKonamiCode(event) {
+            if (event.code === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    console.log("%c\n!!! KXP MODE ACTIVATED !!!", 
+                        "font-size: 24px; color: #FF66FF; text-shadow: 2px 2px #33FFFF; font-weight: bold;");
+                    console.log("\n~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
+                    console.log("%cCHEAT CODE ACCEPTED. YOU ARE A TRUE WEBMASTER.", "color: #FFFFFF; font-size: 16px;");
+                    console.log("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
+                    konamiIndex = 0; 
+                    document.body.style.transform = 'rotate(3deg)'; // Small visual cue
+                    setTimeout(() => {
+                        document.body.style.transform = 'rotate(0deg)';
+                    }, 1000);
+                }
+            } else {
+                // Reset if the wrong key is pressed, unless it's the start key
+                if (event.code === konamiCode[0]) {
+                    konamiIndex = 1; 
+                } else {
+                    konamiIndex = 0; 
+                }
+            }
+        }
+        document.addEventListener('keydown', checkKonamiCode);
+    });
+</script>
 </body>
 </html>
